@@ -1,6 +1,6 @@
 # Database Schema - MongoDB
 
-## Project
+## Projects
 
 | **id** | **project_name** | 
 |--------|------------------|
