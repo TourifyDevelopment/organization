@@ -1,5 +1,12 @@
 # Database Schema - MongoDB
 
+## Project
+
+| **id** | **project_name** | 
+|--------|------------------|
+| a234adsfa | TFO Tour |
+| asd87f3f2 | Realgymnasium Tour |
+
 ## Container
 **type** can be:
 * text
@@ -17,11 +24,11 @@ Also stores the position of the page on the map.
 There is always a main page, which has the map.
 **name** is used for the route (/sn_labor) and for internatal id (The id field is created automatically by mongodb so we can ignore it). The **display_name** is the name that will be displayed on the page.
 
-| **id** | **name** | **display_name** | **map_x** | **map_y** |
-|--------|--------|----------|-----------|-----------|
-| 9823u4asd | main | main | 0 | 0 |
-| 9823u4asd | sn_labor | SN Labor | 40 | 29 |
-| la83u4a7z | pc3 | PC Raum3 | 10 | 20 |
+| **id** | **project_id** | **name** | **display_name** | **map_x** | **map_y** |
+|--------|----------------|----------|------------------|-----------|-----------|
+| 9823u4asd | a234adsfa | main | main | 0 | 0 |
+| 9823u4asd | a234adsfa | sn_labor | SN Labor | 40 | 29 |
+| la83u4a7z | asd87f3f2 | pc3 | PC Raum3 | 10 | 20 |
 
 ## Resources
 The **type** can be:
