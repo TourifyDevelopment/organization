@@ -14,7 +14,7 @@
 * video
 * audio
 
-| **id**| **page_id** | **name** | **x_coordinate** | **y_coordinate** | **width** | **height** | **type** | **content_id** |
+| **id**| **page_id** | **name** | **x_coordinate** | **y_coordinate** | **width** | **height** | **type** | **resource_id** |
 |---------------|---------|--------------|------------------|------------------|-----------|------------|----------|----------------|
 | 988a987s6324h | sdfsdfa4325sf | description | 40 | 20 | 100 | 200 | text | 3j46j34l53l3 |
 | 786asd77234ff | askdj23fsd | logo_1 | 10 | 10 | 500 | 500 | image | kjhsdfh435h4 |
