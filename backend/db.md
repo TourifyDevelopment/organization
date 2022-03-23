@@ -14,10 +14,10 @@
 * video
 * audio
 
-| **id**| **page_id** | **name** | **x_coordinate** | **y_coordinate** | **width** | **height** | **type** | **resource_id** |
-|---------------|---------|--------------|------------------|------------------|-----------|------------|----------|----------------|
-| 988a987s6324h | sdfsdfa4325sf | description | 40 | 20 | 100 | 200 | text | 3j46j34l53l3 |
-| 786asd77234ff | askdj23fsd | logo_1 | 10 | 10 | 500 | 500 | image | kjhsdfh435h4 |
+| **id**| **page_id** | **name** | **x_coordinate** | **y_coordinate** | **width** | **height** |  **resource_id** |
+|---------------|---------|--------------|------------------|------------------|-----------|------------|----------------|
+| 988a987s6324h | sdfsdfa4325sf | description | 40 | 20 | 100 | 200 | 3j46j34l53l3 |
+| 786asd77234ff | askdj23fsd | logo_1 | 10 | 10 | 500 | 500 | kjhsdfh435h4 |
 
 ## Pages
 Also stores the position of the page on the map.
