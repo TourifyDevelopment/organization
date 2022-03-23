@@ -18,6 +18,9 @@ MS Project erstellen
 ### Planned for Today
 User authentication  
 Datenbank einbinden
+register page  
+landing page  
+login page  
 ### Problems
 
 
@@ -26,10 +29,13 @@ Datenbank einbinden
 User authentication  
 Datenbank einbinden  
 Figma Mockup  
+design register page  
+design login page  
 ### Planned for Today
 User löschen  
 verschiedene Touren managen  
 Drag and Drop bei Editor  
+project page  
 ### Problems
 
 
