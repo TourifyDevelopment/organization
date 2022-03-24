@@ -38,7 +38,13 @@ project page
 
 ## 24.03.2022
 ### Accomplished Yesterday
+User löschen  
+verschiedene Touren managen  
 ### Planned for Today
+Drag and Drop bei Editor  
+Mockup überarbeiten  
+profile pictures  
+login und register fertigstellen
 
 
 ## 25.03.2022
