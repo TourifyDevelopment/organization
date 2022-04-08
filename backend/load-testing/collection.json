@@ -1,0 +1,1793 @@
+{
+	"info": {
+		"_postman_id": "728fdb79-25e6-480a-9d0f-f2a4e204b410",
+		"name": "Tourify-Backend",
+		"description": "API description of the Tourify Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "App Controller login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"user01\",\n  \"password\": \"asdf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login user with username and password - get access token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"user01\",\n  \"password\": \"asdf\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "App Controller register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"user01\",\n  \"password\": \"asdf\",\n  \"profilePicture\": \"image/png;base64;alkdjfalk...\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register user with username and password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"user01\",\n  \"password\": \"asdf\",\n  \"profilePicture\": \"image/png;base64;alkdjfalk...\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "App Controller delete User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"user01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/delete",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"delete"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete user with username (user must be logged in)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"user01\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/delete",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"delete"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "User not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"user01\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/delete",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"delete"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Cannot delete another user(Log in as the user you want to delete)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"user01\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/delete",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"delete"
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "profile Pic",
+					"item": [
+						{
+							"name": "App Controller change Profile Picture",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"picture\": \"image/png;base64;alkdjfalk...\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user/profilePic",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"profilePic"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Changed profile picture",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"picture\": \"image/png;base64;alkdjfalk...\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/user/profilePic",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"user",
+												"profilePic"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "User not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"picture\": \"image/png;base64;alkdjfalk...\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/user/profilePic",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"user",
+												"profilePic"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "App Controller get Profile Picture",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/user/profilePic",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"profilePic"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get profile Picture",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/user/profilePic",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"user",
+												"profilePic"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "User not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/user/profilePic",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"user",
+												"profilePic"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "App Controller get All User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Return all user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/user/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"username\": \"user01\",\n    \"password\": \"aslkdjf\",\n    \"profilePicture\": \"9230932\"\n  },\n  {\n    \"username\": \"user01\",\n    \"password\": \"aslkdjf\",\n    \"profilePicture\": \"9230932\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "App Controller is Valid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/user/valid",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"valid"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Returns Unauthorized if the user is not logged in or the jwt token is not valid",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/user/valid",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"valid"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "pages",
+			"item": [
+				{
+					"name": "Pages Controller create Page",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"projectId\": \"923u54on\",\n  \"name\": \"sn_labor\",\n  \"displayName\": \"Sn Labor\",\n  \"mapX\": 50,\n  \"mapY\": 30\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/pages",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"pages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create new page",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"projectId\": \"923u54on\",\n  \"name\": \"sn_labor\",\n  \"displayName\": \"Sn Labor\",\n  \"mapX\": 50,\n  \"mapY\": 30\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/pages",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pages"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Pages Controller get All Pages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/pages/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"pages",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Returns all pages",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/pages/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pages",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"projectId\": \"kfjasdf\",\n    \"name\": \"sn_labor\",\n    \"displayName\": \"SN Labor\",\n    \"mapX\": -78880387.1783014,\n    \"mapY\": -13971079.102368385\n  },\n  {\n    \"projectId\": \"kfjasdf\",\n    \"name\": \"sn_labor\",\n    \"displayName\": \"SN Labor\",\n    \"mapX\": -72946655.84171271,\n    \"mapY\": 36712604.65264851\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Pages Controller delete Page",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/pages/:pageId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"pages",
+								":pageId"
+							],
+							"variable": [
+								{
+									"key": "pageId",
+									"value": "ad qui laborum",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deletes a page with id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/pages/:pageId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pages",
+										":pageId"
+									],
+									"variable": [
+										{
+											"key": "pageId",
+											"value": "ad qui laborum",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Page with id not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/pages/:pageId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pages",
+										":pageId"
+									],
+									"variable": [
+										{
+											"key": "pageId",
+											"value": "ad qui laborum",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Pages Controller get All Pages For Project",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/pages/:projectId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"pages",
+								":projectId"
+							],
+							"variable": [
+								{
+									"key": "projectId"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a page by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/pages/:projectId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pages",
+										":projectId"
+									],
+									"variable": [
+										{
+											"key": "projectId"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"projectId\": \"kfjasdf\",\n    \"name\": \"sn_labor\",\n    \"displayName\": \"SN Labor\",\n    \"mapX\": -78880387.1783014,\n    \"mapY\": -13971079.102368385\n  },\n  {\n    \"projectId\": \"kfjasdf\",\n    \"name\": \"sn_labor\",\n    \"displayName\": \"SN Labor\",\n    \"mapX\": -72946655.84171271,\n    \"mapY\": 36712604.65264851\n  }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "resources",
+			"item": [
+				{
+					"name": "{resource Id}",
+					"item": [
+						{
+							"name": "Resources Controller delete Resource",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/resources/:resourceId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"resources",
+										":resourceId"
+									],
+									"variable": [
+										{
+											"key": "resourceId",
+											"value": "ad qui laborum",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Resource with id",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/resources/:resourceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"resources",
+												":resourceId"
+											],
+											"variable": [
+												{
+													"key": "resourceId",
+													"value": "ad qui laborum",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Resource not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/resources/:resourceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"resources",
+												":resourceId"
+											],
+											"variable": [
+												{
+													"key": "resourceId",
+													"value": "ad qui laborum",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Resources Controller get Resource By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/resources/:resourceId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"resources",
+										":resourceId"
+									],
+									"variable": [
+										{
+											"key": "resourceId",
+											"value": "ad qui laborum",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get resource by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/resources/:resourceId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"resources",
+												":resourceId"
+											],
+											"variable": [
+												{
+													"key": "resourceId",
+													"value": "ad qui laborum",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"Audio\",\n  \"blob\": \"image/png;base64;alkdjfalk...\",\n  \"style\": {\n    \"fontSize\": \"8\",\n    \"color\": \"#983475\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Resources Controller add Resource",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": \"Text\",\n  \"blob\": \"image/png;base64;alkdjfalk...\",\n  \"style\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/resources",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"resources"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add new Resource",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"type\": \"Text\",\n  \"blob\": \"image/png;base64;alkdjfalk...\",\n  \"style\": {}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/resources",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"resources"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Resources Controller get All Resources",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/resources/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"resources",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all resources",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/resources/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"resources",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"type\": \"Header\",\n    \"blob\": \"image/png;base64;alkdjfalk...\",\n    \"style\": {\n      \"fontSize\": \"8\",\n      \"color\": \"#983475\"\n    }\n  },\n  {\n    \"type\": \"Header\",\n    \"blob\": \"image/png;base64;alkdjfalk...\",\n    \"style\": {\n      \"fontSize\": \"8\",\n      \"color\": \"#983475\"\n    }\n  }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "container",
+			"item": [
+				{
+					"name": "Container Controller create Container",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"pageId\": \"ajsknkfd7sdf\",\n  \"name\": \"logo_1\",\n  \"xCoordinate\": 39,\n  \"yCoordinate\": 29,\n  \"width\": 29,\n  \"height\": 29,\n  \"resourceId\": \"aisjdf8sud\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/container",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"container"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Container successfully created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"pageId\": \"ajsknkfd7sdf\",\n  \"name\": \"logo_1\",\n  \"xCoordinate\": 39,\n  \"yCoordinate\": 29,\n  \"width\": 29,\n  \"height\": 29,\n  \"resourceId\": \"aisjdf8sud\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/container",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"container"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Container Controller delete Container",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/container/:containerId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"container",
+								":containerId"
+							],
+							"variable": [
+								{
+									"key": "containerId",
+									"value": "ad qui laborum",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Container successfully deleted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/container/:containerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"container",
+										":containerId"
+									],
+									"variable": [
+										{
+											"key": "containerId",
+											"value": "ad qui laborum",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Container not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/container/:containerId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"container",
+										":containerId"
+									],
+									"variable": [
+										{
+											"key": "containerId",
+											"value": "ad qui laborum",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Container Controller get All Container",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/container/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"container",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Return all container",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/container/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"container",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"pageId\": \"hakdfjalsfj\",\n    \"name\": \"logo_1\",\n    \"xCoordinate\": -36322324.65511547,\n    \"yCoordinate\": 13230292.037982002,\n    \"width\": 386264.7771589458,\n    \"height\": -72028714.51357913,\n    \"resourceId\": \"alsdjflka7sf\"\n  },\n  {\n    \"pageId\": \"hakdfjalsfj\",\n    \"name\": \"logo_1\",\n    \"xCoordinate\": -79750655.60224962,\n    \"yCoordinate\": 45808790.57715902,\n    \"width\": 91827350.57163712,\n    \"height\": 57036651.94827804,\n    \"resourceId\": \"alsdjflka7sf\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Container Controller get All Container For Page Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/container/:pageId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"container",
+								":pageId"
+							],
+							"variable": [
+								{
+									"key": "pageId",
+									"value": "ad qui laborum",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Return all container with the provided pageId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/container/:pageId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"container",
+										":pageId"
+									],
+									"variable": [
+										{
+											"key": "pageId",
+											"value": "ad qui laborum",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"pageId\": \"hakdfjalsfj\",\n    \"name\": \"logo_1\",\n    \"xCoordinate\": -36322324.65511547,\n    \"yCoordinate\": 13230292.037982002,\n    \"width\": 386264.7771589458,\n    \"height\": -72028714.51357913,\n    \"resourceId\": \"alsdjflka7sf\"\n  },\n  {\n    \"pageId\": \"hakdfjalsfj\",\n    \"name\": \"logo_1\",\n    \"xCoordinate\": -79750655.60224962,\n    \"yCoordinate\": 45808790.57715902,\n    \"width\": 91827350.57163712,\n    \"height\": 57036651.94827804,\n    \"resourceId\": \"alsdjflka7sf\"\n  }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "projects",
+			"item": [
+				{
+					"name": "Projects Controller get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/projects",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Returns all projects",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/projects",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"projects"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"projectName\": \"TFO tour\",\n    \"owner\": \"user01\",\n    \"description\": \"cool description\",\n    \"mapBlob\": \"image/png;base64;alkdjfalk...\"\n  },\n  {\n    \"projectName\": \"TFO tour\",\n    \"owner\": \"user01\",\n    \"description\": \"cool description\",\n    \"mapBlob\": \"image/png;base64;alkdjfalk...\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Projects Controller create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"projectName\": \"TFO tour\",\n  \"description\": \"Cool tfo tour\",\n  \"mapBlob\": \"image/png;base64;alkdjfalk...\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/projects",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create new project",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"projectName\": \"TFO tour\",\n  \"description\": \"Cool tfo tour\",\n  \"mapBlob\": \"image/png;base64;alkdjfalk...\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/projects",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"projects"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Projects Controller delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/projects/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "ad qui laborum",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Project not deleted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/projects/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"projects",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ad qui laborum",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Project not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/projects/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"projects",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ad qui laborum",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "App Controller test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "\"ad qui laborum\""
+				}
+			]
+		},
+		{
+			"name": "Prometheus Controller index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/metrics",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"metrics"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/metrics",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"metrics"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
