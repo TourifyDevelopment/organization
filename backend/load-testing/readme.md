@@ -1,6 +1,9 @@
 # Load Testing  
 ## Resource
-https://k6.io/blog/load-testing-with-postman-collections/
+https://k6.io/blog/load-testing-with-postman-collections/  
+  
+Load testing with 500 user at ./summary.html visible at:  
+https://htmlpreview.github.io/?https://github.com/TourifyDevelopment/organization/blob/main/backend/load-testing/summary.html  
 
 ## Postman export
 Export postman collection:  
